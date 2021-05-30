@@ -5,7 +5,7 @@ import styles from './UiVideo.module.css';
 
 export interface UiVideoProps {
 	src: string;
-	playbackRate: number;
+	playbackRate?: number;
 	classes?: string;
 }
 

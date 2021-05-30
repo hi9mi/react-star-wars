@@ -1,7 +1,6 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
 
-import { setPersonToFavorite, removePersonFromFavorite } from '@store/actions';
+import { useActions } from '@hooks/useActions';
 import iconFavoriteFill from './img/favorite-fill.svg';
 import iconFavorite from './img/favorite.svg';
 
@@ -22,15 +21,15 @@ const PersonPhoto: React.FC<PersonPhotoProps> = ({
 	isFavorite,
 	setIsFavorite,
 }) => {
-	const dispatch = useDispatch();
+	const { setPersonToFavorite, removePersonFromFavorite } = useActions();
 
 	const dispatchFavoritePeople = (): void => {
 		if (isFavorite && id) {
-			dispatch(removePersonFromFavorite(id));
+			removePersonFromFavorite(id);
 			setIsFavorite(false);
 		}
 		if (!isFavorite && id && name && photo) {
-			dispatch(setPersonToFavorite({ [id]: { name, img: photo } }));
+			setPersonToFavorite({ [id]: { name, img: photo } });
 			setIsFavorite(true);
 		}
 	};

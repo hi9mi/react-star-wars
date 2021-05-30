@@ -20,7 +20,7 @@ interface RouterProps {
 	id: string;
 }
 
-interface PersonPageProps extends RouteComponentProps<RouterProps> {
+export interface PersonPageProps extends RouteComponentProps<RouterProps> {
 	setErrorApi: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
@@ -38,7 +38,6 @@ const PersonPage: React.FC<PersonPageProps> = ({ match, setErrorApi }) => {
 		(async () => {
 			const id = match.params.id;
 			const res = (await getApiResource(`${API_PERSON}/${id}/`)) as IPersonResponse;
-			console.log(res);
 
 			setPersonFavorite(!!favorites[id]);
 			if (res) {

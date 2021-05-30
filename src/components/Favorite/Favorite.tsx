@@ -7,7 +7,7 @@ import icon from './img/bookmark.svg';
 import styles from './Favorite.module.css';
 
 const Favorite: React.FC = () => {
-	const [count, setCount] = React.useState<string | number>();
+	const [count, setCount] = React.useState<string | number | null>(null);
 	const favorites = useTypedSelector((state) => state.favorites);
 
 	React.useEffect(() => {

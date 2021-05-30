@@ -11,8 +11,6 @@ interface PersonFilmsProps {
 
 const PersonFilms: React.FC<PersonFilmsProps> = ({ films }) => {
 	const [filmsName, setFilmsName] = React.useState<FilmType[]>([]);
-	console.log(filmsName);
-	console.log(films);
 
 	React.useEffect(() => {
 		(async () => {

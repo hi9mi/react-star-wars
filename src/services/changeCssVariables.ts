@@ -5,8 +5,9 @@
 --theme-dark-УникальноеИмя    # для "dark"
 --theme-neitral-УникальноеИмя # для "neitral"
 */
+import { Themes } from '@context/ThemeProvider';
 
-export const changeCssVariables = (theme: string): void => {
+export const changeCssVariables = (theme: Themes): void => {
 	const root = document.querySelector(':root') as HTMLElement;
 
 	const cssVariables = ['header', 'bgimage'];

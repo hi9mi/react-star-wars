@@ -10,7 +10,7 @@ import {
 export const getPeoplePageId = (url: string): number => {
 	const pos = url.lastIndexOf(SWAPI_PARAM_PAGE);
 	const id = url.slice(pos + SWAPI_PARAM_PAGE.length, url.length);
-	return Number(id);
+	return +id;
 };
 
 const getId = (url: string, category: string): string => {

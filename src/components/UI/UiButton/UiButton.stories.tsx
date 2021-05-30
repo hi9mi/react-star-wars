@@ -1,8 +1,7 @@
 import React from 'react';
+import { Story } from '@storybook/react';
 
 import UiButton, { UiButtonProps } from './UiButton';
-import { Story } from '@storybook/react';
-import { Themes } from '@context/ThemeProvider';
 
 export default {
 	title: 'Ui-Kit/UiButton',
@@ -15,7 +14,7 @@ const props = {
 	text: 'Hello',
 	onClick: () => console.log('Button Click'),
 	disabled: false,
-	theme: Themes.THEME_DARK,
+	theme: 'dark',
 	classes: '',
 };
 
@@ -23,14 +22,14 @@ export const Light = Template.bind({});
 
 Light.args = {
 	...props,
-	theme: Themes.THEME_LIGHT,
+	theme: 'light',
 };
 
 export const Dark = Template.bind({});
 
 Dark.args = {
 	...props,
-	theme: Themes.THEME_DARK,
+	theme: 'dark',
 };
 
 export const Disabled = Template.bind({});
@@ -38,5 +37,4 @@ export const Disabled = Template.bind({});
 Disabled.args = {
 	...props,
 	disabled: true,
-	theme: Themes.THEME_DARK,
 };

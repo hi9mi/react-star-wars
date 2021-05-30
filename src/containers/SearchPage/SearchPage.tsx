@@ -21,7 +21,7 @@ const SearchPage: React.FC<SearchPageProps> = ({ setErrorApi }) => {
 
 	const getResponse = async (params: string): Promise<void> => {
 		const res = (await getApiResource(API_SEARCH + params)) as IResponse;
-		console.log(res);
+
 		if (res) {
 			const peopleList: IPerson[] = res.results.map(
 				({ name, url }: { name: string; url: string }) => {

@@ -1,5 +1,11 @@
 export type PersonFavoriteType = Record<string, { name: string; img: string }>;
 
+export enum LoadingStatus {
+	LOADING = 'LOADING',
+	LOADED = 'LOADED',
+	NEVER = 'NEVER',
+}
+
 export interface IPerson {
 	id: string;
 	name: string;

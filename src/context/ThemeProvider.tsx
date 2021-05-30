@@ -1,6 +1,8 @@
 import React from 'react';
 
 import { changeCssVariables } from '@services/changeCssVariables';
+import { getLocalStorage } from '@utils/localStorage';
+import { useActions } from '@hooks/useActions';
 
 export enum Themes {
 	THEME_LIGHT = 'light',
@@ -16,9 +18,11 @@ type MainContextProps = {
 const ThemeContext = React.createContext<MainContextProps>({} as MainContextProps);
 
 const ThemeProvider: React.FC = ({ children, ...props }) => {
-	const [theme, setTheme] = React.useState<null | Themes>(null);
+	const [theme, setTheme] = React.useState<null | Themes>(getLocalStorage('theme') as Themes);
+	const { setThemeAction } = useActions();
 
 	const change = (name: Themes): void => {
+		setThemeAction(name);
 		setTheme(name);
 		changeCssVariables(name);
 	};
