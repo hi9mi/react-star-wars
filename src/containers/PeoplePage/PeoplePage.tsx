@@ -36,8 +36,8 @@ const PeoplePage: React.FC<PeoplePageProps> = ({ setErrorApi }) => {
 				};
 			});
 
-			res.previous && setPrevPage(changeHTTP(res.previous));
-			res.next && setNextPage(changeHTTP(res.next));
+			setPrevPage(changeHTTP(res.previous));
+			setNextPage(changeHTTP(res.next));
 			setCounterPage(getPeoplePageId(url));
 			setPeople(peopleList);
 			setErrorApi(false);

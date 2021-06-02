@@ -6,7 +6,7 @@ import { FilmType, IPersonResponse, IResponse } from '@store/types';
  * @param {String} url - url для изменения
  * @returns {String} - url с HTTPS
  */
-export const changeHTTP = (url: string): string => {
+export const changeHTTP = (url: string | null): string | null => {
 	const result = url ? url.replace(HTTP, HTTPS) : url;
 	return result;
 };
@@ -35,7 +35,7 @@ export const getApiResource = async (
 export const makeConcurrentRequest = async (url: string[]): Promise<FilmType[]> => {
 	const res = await Promise.all(
 		url.map((res) => {
-			return fetch(res).then((res): Promise<FilmType> => res.json());
+			return fetch(res as string).then((res): Promise<FilmType> => res.json());
 		})
 	);
 	return res;

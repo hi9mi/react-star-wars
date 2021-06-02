@@ -14,9 +14,9 @@ const PersonFilms: React.FC<PersonFilmsProps> = ({ films }) => {
 
 	React.useEffect(() => {
 		(async () => {
-			const filmsHTTPS = films.map((url) => changeHTTP(url));
+			const filmsHTTPS = films.map((url) => changeHTTP(url)) as string[];
 			const response = await makeConcurrentRequest(filmsHTTPS);
-			setFilmsName(response);
+			setFilmsName(response as FilmType[]);
 		})();
 	}, []);
 
