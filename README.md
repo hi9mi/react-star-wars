@@ -1,5 +1,10 @@
 # React Star Wars
-Небольшой проект с использованием API  [SWAPI - The Star Wars API](https://swapi.dev/) и [Star Wars: A Visual Guide](https://starwars-visualguide.com)
+Небольшой проект с использованием [SWAPI - The Star Wars API](https://swapi.dev/) и [Star Wars: A Visual Guide](https://starwars-visualguide.com)
+
+<p align="center">
+  <img src="https://www.icegif.com/wp-content/uploads/star-wars-icegif-3.gif" />
+</p>
+
 ## Установка и Запуск
 1. ```npm install``` или ```yarn```
 2. Выполнить команду ```yarn start``` или ```npm start```
