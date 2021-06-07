@@ -37,7 +37,7 @@ const PersonPage: React.FC<PersonPageProps> = ({ match, setErrorApi }) => {
 	React.useEffect(() => {
 		(async () => {
 			const id = match.params.id;
-			const res = (await getApiResource(`${API_PERSON}/${id}/`)) as IPersonResponse;
+			const res = await getApiResource<IPersonResponse>(`${API_PERSON}/${id}/`);
 
 			setPersonFavorite(!!favorites[id]);
 			if (res) {

@@ -9,7 +9,7 @@ export interface ThemeState {
 }
 
 const initialState = {
-	theme: getLocalStorage('theme') as Themes,
+	theme: getLocalStorage<Themes>('theme'),
 	status: LoadingStatus.NEVER,
 };
 

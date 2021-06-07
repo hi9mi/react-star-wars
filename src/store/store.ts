@@ -3,13 +3,14 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 
 import rootReducer from '@store/reducers';
+import { PersonFavoriteType } from '@store/types';
+import { Themes } from '@context/ThemeProvider';
 import { setLocalStorage } from '@utils/localStorage';
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
-
 store.subscribe(() => {
-	setLocalStorage('store', store.getState().favorites);
-	setLocalStorage('theme', store.getState().theme.theme);
+	setLocalStorage<PersonFavoriteType>('store', store.getState().favorites);
+	setLocalStorage<Themes>('theme', store.getState().theme.theme);
 });
 
 export default store;

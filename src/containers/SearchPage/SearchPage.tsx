@@ -20,7 +20,7 @@ const SearchPage: React.FC<SearchPageProps> = ({ setErrorApi }) => {
 	const [people, setPeople] = React.useState<IPerson[]>([]);
 
 	const getResponse = async (params: string): Promise<void> => {
-		const res = (await getApiResource(API_SEARCH + params)) as IResponse;
+		const res = await getApiResource<IResponse>(API_SEARCH + params);
 
 		if (res) {
 			const peopleList: IPerson[] = res.results.map(

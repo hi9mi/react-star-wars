@@ -1,5 +1,5 @@
 import { HTTP, HTTPS } from '@constants/api';
-import { FilmType, IPersonResponse, IResponse } from '@store/types';
+import { FilmType } from '@store/types';
 
 /**
  * Изменяет URL с HTTP на HTTPS
@@ -16,9 +16,7 @@ export const changeHTTP = (url: string | null): string | null => {
  * @param {String} url - url для запроса
  * @returns {Promise} - Promise с результатом запроса
  */
-export const getApiResource = async (
-	url: string
-): Promise<IResponse | IPersonResponse | boolean> => {
+export const getApiResource = async <T>(url: string): Promise<T | false> => {
 	try {
 		const res = await fetch(url);
 		if (!res.ok) {

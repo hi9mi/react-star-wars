@@ -23,7 +23,7 @@ const PeoplePage: React.FC<PeoplePageProps> = ({ setErrorApi }) => {
 	const queryPage = query.get('page');
 
 	const getResource = async (url: string): Promise<void> => {
-		const res = (await getApiResource(url)) as IResponse;
+		const res = await getApiResource<IResponse>(url);
 
 		if (res) {
 			const peopleList = res.results.map(({ name, url }) => {

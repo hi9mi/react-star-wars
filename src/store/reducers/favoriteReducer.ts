@@ -4,7 +4,7 @@ import { FavoriteActionTypes, PersonFavoriteActions } from '@store/constants/act
 import { getLocalStorage } from '@utils/localStorage';
 import { PersonFavoriteType } from '@store/types';
 
-const initialState: PersonFavoriteType = getLocalStorage('store') as PersonFavoriteType;
+const initialState: PersonFavoriteType = getLocalStorage<PersonFavoriteType>('store');
 
 const favoriteReducer = (
 	state = initialState,

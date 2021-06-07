@@ -18,7 +18,7 @@ type MainContextProps = {
 const ThemeContext = React.createContext<MainContextProps>({} as MainContextProps);
 
 const ThemeProvider: React.FC = ({ children, ...props }) => {
-	const [theme, setTheme] = React.useState<null | Themes>(getLocalStorage('theme') as Themes);
+	const [theme, setTheme] = React.useState<null | Themes>(getLocalStorage<Themes>('theme'));
 	const { setThemeAction } = useActions();
 
 	const change = (name: Themes): void => {

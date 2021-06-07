@@ -1,14 +1,11 @@
-import { Themes } from '@context/ThemeProvider';
-import { PersonFavoriteType } from '@store/types';
-
-export const getLocalStorage = (key: string): PersonFavoriteType | Themes => {
+export const getLocalStorage = <T>(key: string): T => {
 	const data = localStorage.getItem(key);
 	if (data !== null) {
 		return JSON.parse(data);
 	}
-	return {};
+	return {} as T;
 };
 
-export const setLocalStorage = (key: string, data: PersonFavoriteType | Themes): void => {
+export const setLocalStorage = <T>(key: string, data: T): void => {
 	localStorage.setItem(key, JSON.stringify(data));
 };

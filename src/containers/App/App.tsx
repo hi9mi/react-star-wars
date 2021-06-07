@@ -22,7 +22,7 @@ const App: React.FC = () => {
 
 	React.useEffect(() => {
 		changeCssVariables(theme);
-		asyncSetThemeAction(getLocalStorage('theme') as Themes);
+		asyncSetThemeAction(getLocalStorage<Themes>('theme'));
 	}, []);
 
 	if (!isReady) {
