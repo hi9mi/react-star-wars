@@ -2,7 +2,7 @@ import { applyMiddleware, createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 
-import rootReducer from '@store/reducers';
+import rootReducer from '@store/rootReducer';
 import { PersonFavoriteType } from '@store/types';
 import { Themes } from '@context/ThemeProvider';
 import { setLocalStorage } from '@utils/localStorage';

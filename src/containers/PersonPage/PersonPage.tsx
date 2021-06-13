@@ -1,13 +1,14 @@
 import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import { withErrorApi } from '@hoc-helpers/withErrorApi';
 import PersonPhoto from '@components/PersonPage/PersonPhoto';
 import PersonInfo from '@components/PersonPage/PersonInfo';
 import PersonLinkBack from '@components/PersonPage/PersonLinkBack';
-import { useTypedSelector } from '@hooks/useTypedSelector';
 import UiLoading from '@ui/UiLoading';
 import { IPersonResponse, PersonInfoType } from '@store/types';
+import { selectFavoritePersons } from '@ducks/favoritePerson/selector';
 import { getApiResource } from '@utils/network';
 import { getPeopleImage } from '@services/getPeopleData';
 import { API_PERSON } from '@constants/api';
@@ -32,7 +33,7 @@ const PersonPage: React.FC<PersonPageProps> = ({ match, setErrorApi }) => {
 	const [personFilms, setPersonFilms] = React.useState<IPersonResponse['films'] | null>(null);
 	const [personFavorite, setPersonFavorite] = React.useState(false);
 
-	const favorites = useTypedSelector((state) => state.favorites);
+	const favorites = useSelector(selectFavoritePersons);
 
 	React.useEffect(() => {
 		(async () => {

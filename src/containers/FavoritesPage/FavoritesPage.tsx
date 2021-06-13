@@ -1,14 +1,15 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import PeopleList from '@components/PeoplePage/PeopleList';
 import { IPerson } from '@store/types';
-import { useTypedSelector } from '@hooks/useTypedSelector';
+import { selectFavoritePersons } from '@ducks/favoritePerson/selector';
 
 import styles from './FavoritesPage.module.css';
 
 const FavoritesPage: React.FC = () => {
 	const [people, setPeople] = React.useState<IPerson[]>([]);
-	const favorites = useTypedSelector((state) => state.favorites);
+	const favorites = useSelector(selectFavoritePersons);
 
 	React.useEffect(() => {
 		const arr = Object.entries(favorites);

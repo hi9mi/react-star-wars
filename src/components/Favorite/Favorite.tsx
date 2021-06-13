@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-import { useTypedSelector } from '@hooks/useTypedSelector';
+import { selectFavoritePersons } from '@ducks/favoritePerson/selector';
 import icon from './img/bookmark.svg';
 
 import styles from './Favorite.module.css';
 
 const Favorite: React.FC = () => {
 	const [count, setCount] = React.useState<string | number | null>(null);
-	const favorites = useTypedSelector((state) => state.favorites);
+	const favorites = useSelector(selectFavoritePersons);
 
 	React.useEffect(() => {
 		const length = Object.keys(favorites).length;

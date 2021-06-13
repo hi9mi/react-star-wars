@@ -13,6 +13,7 @@ export interface IPerson {
 }
 
 export type FilmType = { episode_id: number; title: string };
+
 export type PersonInfoType = { title: string; data: string };
 
 export interface IPersonResponse {

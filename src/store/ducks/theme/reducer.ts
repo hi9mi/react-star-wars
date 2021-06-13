@@ -1,14 +1,10 @@
 import { Themes } from '@context/ThemeProvider';
-import { ThemeActions, ThemeActionTypes } from '@store/constants/actionTypes';
+import { ThemeState } from '@ducks/theme/contracts/state';
+import { ThemeActions, ThemeActionTypes } from '@ducks/theme/contracts/actionTypes';
 import { LoadingStatus } from '@store/types';
 import { getLocalStorage } from '@utils/localStorage';
 
-export interface ThemeState {
-	theme: Themes;
-	status: LoadingStatus;
-}
-
-const initialState = {
+const initialState: ThemeState = {
 	theme: getLocalStorage<Themes>('theme'),
 	status: LoadingStatus.NEVER,
 };

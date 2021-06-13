@@ -1,12 +1,11 @@
+import { PersonFavoriteState } from '@ducks/favoritePerson/contracts/state';
 import {
 	FavoriteActionTypes,
 	RemovePersonFromFavoriteInterface,
 	SetPersonToFavoriteInterface,
-} from '@store/constants/actionTypes';
+} from '@ducks/favoritePerson/contracts/actionTypes';
 
-import { PersonFavoriteType } from '@store/types';
-
-export const setPersonToFavorite = (person: PersonFavoriteType): SetPersonToFavoriteInterface => ({
+export const setPersonToFavorite = (person: PersonFavoriteState): SetPersonToFavoriteInterface => ({
 	type: FavoriteActionTypes.ADD_PERSON_TO_FAVORITE,
 	payload: person,
 });

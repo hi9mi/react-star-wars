@@ -15,6 +15,7 @@ module.exports = function override(config) {
 		'@static': 'src/static',
 		'@hooks': 'src/hooks',
 		'@store': 'src/store',
+		'@ducks': 'src/store/ducks',
 		'@context': 'src/context',
 	})(config);
 	return config;

@@ -1,15 +1,18 @@
 import { omit } from 'lodash';
 
-import { FavoriteActionTypes, PersonFavoriteActions } from '@store/constants/actionTypes';
+import {
+	FavoriteActionTypes,
+	PersonFavoriteActions,
+} from '@ducks/favoritePerson/contracts/actionTypes';
+import { PersonFavoriteState } from '@ducks/favoritePerson/contracts/state';
 import { getLocalStorage } from '@utils/localStorage';
-import { PersonFavoriteType } from '@store/types';
 
-const initialState: PersonFavoriteType = getLocalStorage<PersonFavoriteType>('store');
+const initialState: PersonFavoriteState = getLocalStorage<PersonFavoriteState>('store');
 
 const favoriteReducer = (
 	state = initialState,
 	action: PersonFavoriteActions
-): PersonFavoriteType => {
+): PersonFavoriteState => {
 	switch (action.type) {
 		case FavoriteActionTypes.ADD_PERSON_TO_FAVORITE:
 			return {

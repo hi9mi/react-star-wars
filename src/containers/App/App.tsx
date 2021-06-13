@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { useSelector } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 
 import Header from '@components/Header';
@@ -10,13 +10,14 @@ import { Themes } from '@context/ThemeProvider';
 
 import styles from './App.module.css';
 import { useActions } from '@hooks/useActions';
-import { useTypedSelector } from '@hooks/useTypedSelector';
 import { LoadingStatus } from '@store/types';
+import { selectTheme, selectThemeStatus } from '@ducks/theme/selector';
 import UiLoading from '@components/UI/UiLoading';
 
 const App: React.FC = () => {
 	const { asyncSetThemeAction } = useActions();
-	const { theme, status } = useTypedSelector((state) => state.theme);
+	const theme = useSelector(selectTheme);
+	const status = useSelector(selectThemeStatus);
 
 	const isReady = status === LoadingStatus.LOADED;
 

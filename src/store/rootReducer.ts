@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
-import favoriteReducer from '@store/reducers/favoriteReducer';
-import themeReducer from './themeReducer';
+import favoriteReducer from '@ducks/favoritePerson/reducer';
+import themeReducer from '@ducks/theme/reducer';
 
 const rootReducer = combineReducers({
 	favorites: favoriteReducer,
