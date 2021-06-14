@@ -17,8 +17,9 @@
 		"redux-thunk": "^2.3.0"
 	},
 	"scripts": {
-		"deploy": "yarn build && build-storybook && yarn build-gh-pages",
+		"deploy": "yarn build && yarn build-storybook && yarn build-gh-pages",
 		"build-storybook": "build-storybook -o ./build/storybook",
+
 
 		"start": "react-app-rewired start",
 		"build": "react-app-rewired build",
