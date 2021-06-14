@@ -20,7 +20,6 @@ const PeopleNavigation: React.FC<PeopleNavigationProps> = ({
 }) => {
 	const handleChangeNext = (): Promise<void> => getResource(nextPage as string);
 	const handleChangePrev = (): Promise<void> => getResource(prevPage as string);
-	console.log(counterPage);
 
 	return (
 		<div className={styles.container}>
