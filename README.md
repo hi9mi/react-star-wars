@@ -24,11 +24,6 @@ yarn install
 
 ## Скрипты
 
-1. Запустить сторибук `yarn storybook` или `npm run storybook`
-2. Деплой приложения на GitHub Pages `yarn deploy` или `npm run deploy`
-3. Запустить преттиер `yarn format` или `npm run format`
-4. Запустить линт `yarn lint` или `npm run lint`
-
 ```bash
 # npm
 npm run start            # запустить приложение в режиме разработки
