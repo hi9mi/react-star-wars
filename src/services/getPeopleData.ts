@@ -1,10 +1,10 @@
 import {
 	GUIDE_IMG_EXTENSION,
-	HTTP,
 	SWAPI_PEOPLE,
 	SWAPI_ROOT,
 	URL_IMG_PERSON,
 	SWAPI_PARAM_PAGE,
+	HTTPS,
 } from '@constants/api';
 
 export const getPeoplePageId = (url: string): number => {
@@ -14,7 +14,7 @@ export const getPeoplePageId = (url: string): number => {
 };
 
 const getId = (url: string, category: string): string => {
-	const id = url.replace(HTTP + SWAPI_ROOT + category, '').replace(/\//g, '');
+	const id = url.replace(HTTPS + SWAPI_ROOT + category, '').replace(/\//g, '');
 	return id;
 };
 
