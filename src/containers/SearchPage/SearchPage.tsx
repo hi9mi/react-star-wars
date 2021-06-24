@@ -11,11 +11,7 @@ import { getPeopleId, getPeopleImage } from '@services/getPeopleData';
 
 import styles from './SearchPage.module.css';
 
-interface SearchPageProps {
-	setErrorApi: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const SearchPage: React.FC<SearchPageProps> = ({ setErrorApi }) => {
+const SearchPage: React.FC = withErrorApi(({ setErrorApi }) => {
 	const [inputSearchValue, setInputSearchValue] = React.useState('');
 	const [people, setPeople] = React.useState<IPerson[]>([]);
 
@@ -68,6 +64,6 @@ const SearchPage: React.FC<SearchPageProps> = ({ setErrorApi }) => {
 			<SearchPageInfo people={people} />
 		</>
 	);
-};
+});
 
-export default withErrorApi(SearchPage);
+export default SearchPage;

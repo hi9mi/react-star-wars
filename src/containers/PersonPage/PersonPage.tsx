@@ -21,11 +21,9 @@ interface RouterProps {
 	id: string;
 }
 
-export interface PersonPageProps extends RouteComponentProps<RouterProps> {
-	setErrorApi: React.Dispatch<React.SetStateAction<boolean>>;
-}
+export type PersonPageProps = RouteComponentProps<RouterProps>;
 
-const PersonPage: React.FC<PersonPageProps> = ({ match, setErrorApi }) => {
+const PersonPage: React.FC<PersonPageProps> = withErrorApi(({ match, setErrorApi }) => {
 	const [personId, setPersonId] = React.useState<string | null>(null);
 	const [personInfo, setPersonInfo] = React.useState<PersonInfoType[] | null>(null);
 	const [personName, setPersonName] = React.useState<IPersonResponse['name'] | null>(null);
@@ -85,6 +83,6 @@ const PersonPage: React.FC<PersonPageProps> = ({ match, setErrorApi }) => {
 			</div>
 		</>
 	);
-};
+});
 
-export default withErrorApi(PersonPage);
+export default PersonPage;

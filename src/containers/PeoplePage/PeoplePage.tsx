@@ -9,11 +9,7 @@ import { API_PEOPLE } from '@constants/api';
 import { useQueryParams } from '@hooks/useQueryParams';
 import { IPerson, IResponse } from '@store/types';
 
-interface PeoplePageProps {
-	setErrorApi: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const PeoplePage: React.FC<PeoplePageProps> = ({ setErrorApi }) => {
+const PeoplePage: React.FC = withErrorApi(({ setErrorApi }) => {
 	const [people, setPeople] = React.useState<IPerson[] | null>(null);
 	const [prevPage, setPrevPage] = React.useState<string | null>(null);
 	const [nextPage, setNextPage] = React.useState<string | null>(null);
@@ -61,6 +57,6 @@ const PeoplePage: React.FC<PeoplePageProps> = ({ setErrorApi }) => {
 			{people && <PeopleList people={people} />}
 		</>
 	);
-};
+});
 
-export default withErrorApi(PeoplePage);
+export default PeoplePage;
