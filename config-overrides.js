@@ -17,6 +17,7 @@ module.exports = function override(config) {
 		'@store': 'src/store',
 		'@ducks': 'src/store/ducks',
 		'@context': 'src/context',
+		types: 'src/types',
 	})(config);
 	return config;
 };

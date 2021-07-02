@@ -1,13 +1,13 @@
 import { Dispatch } from 'redux';
 
-import { Themes } from '@context/ThemeProvider';
-import { LoadingStatus } from '@store/types';
 import {
 	AsyncSetThemeActionInterface,
 	SetThemeActionInterface,
 	SetThemeLoadingStatusActionInterface,
 	ThemeActionTypes,
 } from '@ducks/theme/contracts/actionTypes';
+import { LoadingStatus } from 'types/loadingTypes';
+import { Themes } from 'types/themeTypes';
 
 export const setThemeLoadingStatusAction = (
 	loadingStatus: LoadingStatus

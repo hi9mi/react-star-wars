@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { FilmType, IPersonResponse } from '@store/types';
 import { makeConcurrentRequest, changeHTTP } from '@utils/network';
+import { FilmType } from 'types/filmTypes';
+import { IPersonResponse } from 'types/personTypes';
 
 import styles from './PersonFilms.module.css';
 

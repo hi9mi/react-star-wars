@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { PersonInfoType } from '@store/types';
+import { PersonInfoType } from 'types/personTypes';
 
 import styles from './PersonInfo.module.css';
 

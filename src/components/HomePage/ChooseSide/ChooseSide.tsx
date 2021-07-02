@@ -1,7 +1,8 @@
 import React from 'react';
 import cn from 'classnames';
 
-import { useTheme, Themes } from '@context/ThemeProvider';
+import { useTheme } from '@context/ThemeProvider';
+import { Themes } from 'types/themeTypes';
 
 import imgLightSide from './img/light-side.jpg';
 import imgDarkSide from './img/dark-side.jpg';

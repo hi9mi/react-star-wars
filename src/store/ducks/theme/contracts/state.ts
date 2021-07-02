@@ -1,5 +1,5 @@
-import { Themes } from '@context/ThemeProvider';
-import { LoadingStatus } from '@store/types';
+import { LoadingStatus } from 'types/loadingTypes';
+import { Themes } from 'types/themeTypes';
 
 export interface ThemeState {
 	theme: Themes;

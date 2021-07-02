@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { IPerson } from '@store/types';
+import { IPerson } from 'types/personTypes';
 
 import styles from './PeopleList.module.css';
 

@@ -2,8 +2,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 import PeopleList from '@components/PeoplePage/PeopleList';
-import { IPerson } from '@store/types';
 import { selectFavoritePersons } from '@ducks/favoritePerson/selector';
+import { IPerson } from 'types/personTypes';
 
 import styles from './FavoritesPage.module.css';
 

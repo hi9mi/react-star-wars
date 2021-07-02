@@ -1,7 +1,7 @@
 import { Action } from 'redux';
 
-import { Themes } from '@context/ThemeProvider';
-import { LoadingStatus } from '@store/types';
+import { Themes } from 'types/themeTypes';
+import { LoadingStatus } from 'types/loadingTypes';
 
 export enum ThemeActionTypes {
 	ASYNC_SET_THEME = 'theme/ASYNC_SET_THEME',

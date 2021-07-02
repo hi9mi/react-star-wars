@@ -7,11 +7,11 @@ import PersonPhoto from '@components/PersonPage/PersonPhoto';
 import PersonInfo from '@components/PersonPage/PersonInfo';
 import PersonLinkBack from '@components/PersonPage/PersonLinkBack';
 import UiLoading from '@ui/UiLoading';
-import { IPersonResponse, PersonInfoType } from '@store/types';
 import { selectFavoritePersons } from '@ducks/favoritePerson/selector';
 import { getApiResource } from '@utils/network';
 import { getPeopleImage } from '@services/getPeopleData';
 import { API_PERSON } from '@constants/api';
+import { IPersonResponse, PersonInfoType } from 'types/personTypes';
 
 import styles from './PersonPage.module.css';
 

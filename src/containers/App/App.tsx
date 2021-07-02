@@ -3,16 +3,16 @@ import { useSelector } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
 
 import Header from '@components/Header';
+import UiLoading from '@ui/UiLoading';
 import routesConfig from '@routes/routesConfig';
+import { useActions } from '@hooks/useActions';
+import { selectTheme, selectThemeStatus } from '@ducks/theme/selector';
 import { changeCssVariables } from '@services/changeCssVariables';
 import { getLocalStorage } from '@utils/localStorage';
-import { Themes } from '@context/ThemeProvider';
+import { LoadingStatus } from 'types/loadingTypes';
+import { Themes } from 'types/themeTypes';
 
 import styles from './App.module.css';
-import { useActions } from '@hooks/useActions';
-import { LoadingStatus } from '@store/types';
-import { selectTheme, selectThemeStatus } from '@ducks/theme/selector';
-import UiLoading from '@components/UI/UiLoading';
 
 const App: React.FC = () => {
 	const { asyncSetThemeAction } = useActions();

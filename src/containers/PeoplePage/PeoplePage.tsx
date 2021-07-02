@@ -7,7 +7,8 @@ import { getApiResource, changeHTTP } from '@utils/network';
 import { getPeopleId, getPeopleImage, getPeoplePageId } from '@services/getPeopleData';
 import { API_PEOPLE } from '@constants/api';
 import { useQueryParams } from '@hooks/useQueryParams';
-import { IPerson, IResponse } from '@store/types';
+import { IPerson } from 'types/personTypes';
+import { IResponse } from 'types/responseTypes';
 
 const PeoplePage: React.FC = withErrorApi(({ setErrorApi }) => {
 	const [people, setPeople] = React.useState<IPerson[] | null>(null);

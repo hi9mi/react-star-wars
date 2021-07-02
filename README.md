@@ -14,11 +14,11 @@
 ## Установка и Запуск
 
 ```bash
-# install dependencies
-# npm Install
+# Установить зависимости
+# npm
 npm install
 
-# or yarn Install
+# или yarn
 yarn install
 ```
 
@@ -29,21 +29,15 @@ yarn install
 npm run start            # запустить приложение в режиме разработки
 npm run storybook        # запустить storybook
 npm run deploy           # сделать деплой на Github Pages
-npm run format           # запустить Prettier
-npm run lint             # запустить Linter
 
-# or yarn
-yarn start               # запустить приложение в режиме разработки
-yarn storybook           # запустить storybook
-yarn deploy              # сделать деплой на Github Pages
-yarn format              # запустить Prettier
-yarn lint                # запустить Linter
+# или yarn
+yarn start
+yarn storybook           k
+yarn deploy
 ```
 
 ## Stack
 
 - TypeScript
 - React Router DOM - React Router
-- Lodash
 - Redux и Redux Thunk
-- Classnames

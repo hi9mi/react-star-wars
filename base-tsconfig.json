@@ -15,7 +15,8 @@
 			"@hooks/*": ["hooks/*"],
 			"@store/*": ["store/*"],
 			"@ducks/*": ["store/ducks/*"],
-			"@context/*": ["context/*"]
+			"@context/*": ["context/*"],
+			"types/*": ["types/*"]
 		}
 	}
 }

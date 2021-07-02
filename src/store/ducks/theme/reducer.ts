@@ -1,8 +1,8 @@
-import { Themes } from '@context/ThemeProvider';
 import { ThemeState } from '@ducks/theme/contracts/state';
 import { ThemeActions, ThemeActionTypes } from '@ducks/theme/contracts/actionTypes';
-import { LoadingStatus } from '@store/types';
 import { getLocalStorage } from '@utils/localStorage';
+import { Themes } from 'types/themeTypes';
+import { LoadingStatus } from 'types/loadingTypes';
 
 const initialState: ThemeState = {
 	theme: getLocalStorage<Themes>('theme'),

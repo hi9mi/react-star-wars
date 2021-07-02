@@ -1,5 +1,5 @@
 import { HTTP, HTTPS } from '@constants/api';
-import { FilmType } from '@store/types';
+import { FilmType } from 'types/filmTypes';
 
 /**
  * Изменяет URL с HTTP на HTTPS

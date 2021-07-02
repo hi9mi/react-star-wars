@@ -2,7 +2,9 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import Favorite from '@components/Favorite';
-import { useTheme, Themes } from '@context/ThemeProvider';
+import { useTheme } from '@context/ThemeProvider';
+import { Themes } from 'types/themeTypes';
+
 import imgDroid from './img/droid.svg';
 import imgLightsaber from './img/lightsaber.svg';
 import imgSpaceStation from './img/space-station.svg';

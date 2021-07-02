@@ -4,10 +4,11 @@ import { debounce } from 'lodash';
 import { withErrorApi } from '@hoc-helpers/withErrorApi';
 import SearchPageInfo from '@components/SearchPage/SearchPageInfo';
 import UiInput from '@ui/UiInput';
-import { IPerson, IResponse } from '@store/types';
 import { getApiResource } from '@utils/network';
 import { API_SEARCH } from '@constants/api';
 import { getPeopleId, getPeopleImage } from '@services/getPeopleData';
+import { IPerson } from 'types/personTypes';
+import { IResponse } from 'types/responseTypes';
 
 import styles from './SearchPage.module.css';
 
