@@ -32,7 +32,7 @@ npm run deploy           # сделать деплой на Github Pages
 
 # или yarn
 yarn start
-yarn storybook           k
+yarn storybook           
 yarn deploy
 ```
 
